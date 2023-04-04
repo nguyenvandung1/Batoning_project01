@@ -1,0 +1,60 @@
+.why {
+    padding: 30px 0;
+    background-color: $color-coffe-child;
+    .why__container{
+        @include alginSection(85%);
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 600;
+            @media screen and (max-width: 956px){
+                font-size: 2.4rem;
+                margin: 30px 0;
+                
+             } 
+        }
+        .why__content {
+            
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-evenly;
+            @media screen and (max-width: 800px){
+                flex-direction: column-reverse;
+                text-align: center;
+             } 
+            .itm {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .text_1 {
+                    @media screen and (max-width: 800px){
+                       padding: 20px 0;
+                     } 
+                }
+                h3{
+                    font-size: 3.1rem;
+                    font-weight: 600;
+                    color: $color-text-black-a
+                    ;
+                    @media screen and (max-width: 956px){
+                        font-size: 1.8rem;
+                        
+                     } 
+                    @media screen and (max-width: 800px){
+                        font-size: 1.5rem;
+                    } 
+                }
+                p{
+                    @include text(1.2rem,400,left,$color-text-black-a
+                    );
+                    margin-top: 20px;
+                    line-height: 2.5rem;
+                    letter-spacing: 1px;
+
+                }
+            }
+        }
+        
+    
+    }
+}

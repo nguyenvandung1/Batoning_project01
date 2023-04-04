@@ -1,0 +1,79 @@
+.vct{
+    background-color: $color-coffe-child;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    .vtc_container{
+        width: 75%;
+        height: 700px;
+        h1{
+            text-align: center;
+            grid-area: o0;
+            @include text(1.5rem,bold,center,black);
+        }
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 50px auto auto;
+        grid-template-areas: 
+        "o0 o0 o0"
+        "o1 o2 o3"
+        "o1 o5 o6"
+        "o4 o5 o6";
+
+        .vtc_img1{
+            grid-area: o1;
+            background-image: url(../../img/vct_1.png);
+        }
+        .vtc_img2{
+            grid-area: o2;
+            background-image: url(../../img/vct_2.png);
+        }
+        .vtc_img3{
+            grid-area: o3;
+            background-image: url(../../img/vct_3.png);
+        }
+        .vtc_img4{
+            grid-area: o4;
+            background-image: url(../../img/vtc_4.png);
+        }
+        .vtc_img5{
+            grid-area: o5;
+            background-image: url(../../img/vtc_5.png);
+        }
+        .vtc_img6{
+            grid-area: o6;
+            background-image: url(../../img/vtc_7.png);
+        }
+        div{
+            background-color: black;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            background-size: 100% 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .vct{
+        width: 100%;
+        .vtc_container{
+            width: 70%;
+            height: auto;
+            grid-template-columns: 400px;
+            grid-template-rows: 50px 400px 400px 400px 400px 400px;
+            grid-template-areas: 
+            "o0"
+            "o1"
+            "o2"
+            "o3"
+            "o4"
+            "o5"
+            "o6";
+            div{
+                width: 100%;
+            }
+        
+        }
+    }
+}

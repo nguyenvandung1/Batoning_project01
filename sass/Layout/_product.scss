@@ -1,0 +1,46 @@
+.product {
+  padding: 3rem 0;
+  background-color: $color-coffe-child;
+  overflow: hidden;
+  h1 {
+    @include text(3.2rem, 600, center, $color-text-product);
+    padding: 3rem 0
+  }
+  .prodouct_it {
+    @include flex(center);
+    .it_content {
+      transition: all 0.5s ease-out;
+    }
+    // .it_hide_ct {
+    //   transform: translateX(150%);
+    
+    .it_show{
+      transform: translateX(0);
+    }
+   
+    .it_content {
+        padding: 0 2rem;
+      h5 {
+        @include text(3.1rem, 600, left, $color-text-product);
+        line-height: 3.4rem;
+
+      }
+      p {
+        @include text(1.3rem, 400, left, $color-text-product);
+       line-height: 1.8rem;
+       letter-spacing: 2px;
+       margin: 3rem 0;
+      }
+      
+     .btn_product {
+            background-color:$color-btn-product ;
+            a {
+                color: black;
+                font-weight: bold;
+          }
+     }
+     
+    }
+  }
+
+}

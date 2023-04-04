@@ -1,0 +1,142 @@
+footer{
+        background-color: $color-coffe-child;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    .ft_container{
+        padding-top: 30px;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 800px){
+            width: 90%;
+         } 
+
+        .ft_logo{
+
+            width: 25%;
+            text-align: center;
+            @media screen and (max-width: 800px){
+                width: 40%;
+             } 
+            .logo_txt{
+                margin-bottom: 20px;
+                h3{
+                    @include text(1.5rem,bold,center,black)
+                }
+                img{
+                    width: 40%;
+                    object-fit: contain;
+                }
+                word-wrap: break-word;
+                display: flex;
+                
+            }
+            a{
+                color: black;
+            }
+            p{
+                margin-top: 50px;
+            }
+        }
+        .ft_icon{
+
+            ul{
+                li{
+                    a{
+                        @include text(1rem,bold,center,black);
+                    }
+                    margin-bottom: 25px;
+                }
+            }
+        }
+
+        .ft_link{
+
+            ul{
+                li{
+                    margin-bottom: 25px;
+                    a{
+                        @include text(1rem,bold,center,black)
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+// @media screen and (max-width: 400px) {
+//     footer{
+//         width: 100%;
+//         .ft_container{
+            
+//             width: 90%;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             div{
+//                 width: 100%;
+//                 text-align: center;
+//                 margin: 10px 0;
+//             }
+//             .ft_logo{
+//                 order: 2;
+                 
+//                 .logo_txt{
+//                     h3{
+//                         display: none;
+//                     }
+//                     img{
+//                         width: 200px;
+//                     }
+//                 }
+//             }
+//             .ft_icon {
+//                 order: 1;
+//             }
+//             .ft_link{
+//                 display: none;
+//             }
+            
+//         }
+//     }
+// }
+
+@media screen and (max-width: 680px) {
+    footer{
+        width: 100%;
+        .ft_container{
+            
+            width: 90%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            div{
+                width: 100%;
+                text-align: center;
+                margin: 10px 0;
+            }
+            .ft_logo{
+                order: 2;
+                 
+                .logo_txt{
+                    h3{
+                        display: none;
+                    }
+                    img{
+                        width: 80%;
+                    }
+                }
+            }
+            .ft_icon {
+                order: 1;
+            }
+            .ft_link{
+                display: none;
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.btn {
+    padding: 20px 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: $color-bgr-blu;
+    transition: all .5s linear;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.title {
+    @include text(3.2rem, 600, center, $color-text-product);
+    padding: 3rem 0
+ }

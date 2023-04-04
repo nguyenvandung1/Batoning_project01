@@ -1,0 +1,36 @@
+@mixin alginSection($width){
+    width: $width;
+    margin: 0 auto;
+}
+@mixin alginItems(){
+display: flex;
+align-items: center;
+}
+@mixin flex($juts_content){
+    display: flex;
+    justify-content: $juts_content;
+    align-items: center;
+}
+@mixin grid($n,$gap){
+    display: grid;
+    grid-template-columns: repeat($n,1fr);
+    gap: $gap;
+}
+@mixin text($fz,$fw,$alg,$cl){
+    font-size: $fz;
+    font-weight: $fw;
+    text-align: $alg;
+    color: $cl;
+}
+@mixin bgrIMG(){
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: cover;
+}
+@mixin img() {
+    width:$width;
+    max-width:$max_widht;
+    height:auto; 
+    object-fit:cover; 
+    object-position: center center;
+}

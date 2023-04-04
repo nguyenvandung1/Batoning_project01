@@ -1,0 +1,51 @@
+.review {
+    background-color: $color-cofee;
+    padding: 3rem 0; 
+    .review__container {
+        h1 {
+            color: white;
+            letter-spacing: 2px;
+        }
+        .row-1 {
+            font-size: 1.8rem;
+            padding: 0 2rem;
+        }
+        .review__feddback {
+            @include flex(none);
+            background-color: $bgr-review;
+            padding: 3rem 0;
+            border-radius: 1rem;
+            @include alginSection(50%);
+            @media screen and (max-width: 1200px){
+                width: 85%;
+            } 
+            @media screen and (max-width: 800px){
+                width: 100%;
+             } 
+           .name {
+                @include flex(left);
+                .img_user {
+                    width: 100px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .name_user {
+                    padding: 0rem 1.5rem;
+                    h1 {
+                        @include text(1.6rem,600,none,#333);
+                        margin-bottom: 10px;
+                      }
+
+                }
+              
+            }
+            .content {
+                    @include text (1.4rem,400,none,#333);
+                    margin-top: 1.4rem;
+                    letter-spacing: 1.5px;
+                    line-height: 1.5;
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.section_form{
+    background-color: #7C6354;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    .container_form{
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+        form{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                @include text(1.5rem,bold,center,black);
+            }
+            width: 50%;
+            input{
+                width: 100%;
+                border: none;
+                padding: 20px 0;
+                background-color: rgb(170,157,150);
+                border-radius: 10px;
+                margin: 20px 0;
+                padding-left: 10px;
+                ::placeholder{
+                    
+                    @include text(1rem,0,center,$color--text-white);
+                }
+                box-shadow: 1px 2px 3px 2px rgb(77 73 73);
+                &:hover{
+                    box-shadow: -2px -2px 3px 2px rgb(77 73 73) inset;
+                }
+            }
+            .mail_phone{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                .mail{
+                    width: 55%;
+                }
+                .phonenumber{
+                    width: 40%;
+                }
+            }
+
+            .btn_form{
+                border: none;
+                padding: 15px 30px;
+                background-color: rgb(170,157,150);
+                border-radius: 10px;
+                @include text(1rem,bold,center,black);
+                box-shadow: 1px 2px 3px 2px rgb(77 73 73);
+                &:hover{
+                    background-color: #f98953;
+                    
+                }
+            }
+            .time_form{
+                margin-top: 20px;
+                @include text(1rem,bold,center,black);
+                div{
+                    margin: 10px 0;
+                    width: 90%;
+                    display: flex;
+                    justify-content: space-around;
+                    p{
+                        padding: 10px;
+                    }
+                }
+                .time{
+                    p{
+                        background-color: white;
+                        padding: 5px;
+                    }
+                }
+                
+            }
+        }
+        .text_form{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                @include text(1.5rem,bold,center,black);
+                line-height: 50px;
+            }
+        }
+    }
+    
+}
+
+
+
+@media screen and (max-width: 680px) {
+    .section_form{
+        .container_form{
+            width: 80%;
+            .text_form{
+                display: none;
+            }
+            form{
+                width: 100%;
+            }
+        }
+    }
+}

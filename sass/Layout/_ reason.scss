@@ -1,0 +1,118 @@
+.select {
+    padding: 3rem 0;
+    background-color: $color-cofee;
+    h1 {
+        @include text(3.2rem,600,center,#ffff);
+        padding: 2rem 0;
+        @media screen and (max-width: 600px){
+           font-size: 2rem;
+    
+         } 
+        
+    }
+    .select__content {
+        @include alginSection(85%);
+       .select__top {
+        @include flex(none);
+        @media screen and (max-width: 600px){
+           flex-direction: column;
+    
+         } 
+        .item_icon{
+            @include flex( none);
+        }
+   
+        .select__right {
+            width: 65%;
+            margin-left: 2rem;
+            .item_icon {
+                padding: 20px 0;
+                p {
+                    margin-left: 20px;
+                    @include text(1.3rem,600,center,rgba(252, 252, 252, 1)
+                    );
+                    @media screen and (max-width: 800px){
+                       font-size: 1.2rem;
+                       line-height: 1.2;
+                     } 
+                    i>img {
+                        width: 3.3rem;
+                        transition: all .5s linear;
+                        @media screen and (max-width: 800px){
+                            width: 1.6rem;
+                         } 
+                        &:hover {
+                            animation: animationIcon 1.2s linear ;
+                            animation-iteration-count: infinite;
+                            cursor: pointer;
+                          
+                        }
+                    }
+
+                }
+            }
+            .icon1  {
+                padding-left: 3rem;
+            }
+            .icon2  {
+                padding-left: 4.7rem;
+            }
+        }
+        .select__left {
+    
+            width: 25%;
+            @include bgrIMG();
+           overflow: hidden;
+           border-radius: 1.5rem;
+           @media screen and (max-width: 600px){
+           width: 90%;
+    
+         } 
+            img {
+                @media screen and (max-width: 600px){
+                    height: 150px;
+                    object-fit: cover;
+            
+                 } 
+                width: 100%;
+                height: auto;
+                border-radius: 1.5rem;
+                transition: all .5s ease-in-out;
+                &:hover {
+                    transform: scale(1.06);
+                    cursor: pointer;
+                }
+                
+            }
+        }
+       }
+    }
+    .select__bottom {
+        @media screen and (max-width: 600px){
+           display: none;
+         } 
+    }
+} 
+
+
+// Animation 
+@keyframes animationIcon{
+0% {
+    transform: rotate(0deg);
+} 
+20% {
+    transform: rotate(30deg);
+}  
+40% {
+    transform: rotate(70deg);
+}    
+60% {
+    transform: rotate(100deg);
+}    
+80% {
+    transform: rotate(180deg);
+}    
+1000% {
+    transform: rotate(360deg);
+}    
+}
